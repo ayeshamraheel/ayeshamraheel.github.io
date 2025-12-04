@@ -1281,6 +1281,9 @@
     </p>
   </div>
 </article>
+
+
+
    </section>
 
    <!-- PAGE 3: RESUME & SKILLS -->
@@ -1370,7 +1373,7 @@
     <div class="resume-preview">
       📄
     </div>
-    <a href="Ayesham's SG Resume 2025.pdf" class="download-btn" onclick="handleDownload(event)">Download Resume</a>
+    <a href="Ayesham Raheel SG Resume 2025.pdf" class="download-btn" onclick="handleDownload(event)">Download Resume</a>
   </div>
 </section>
 
@@ -1647,17 +1650,27 @@ function handleFormSubmit(event) {
 
     // ========== DOWNLOAD RESUME ==========
     function handleDownload(event) {
-      event.preventDefault();
-      const btn = event.target;
-      btn.textContent = 'PREPARING...';
-      
-      setTimeout(() => {
-        btn.textContent = 'DOWNLOADED!';
-        setTimeout(() => {
-          btn.textContent = 'DOWNLOAD RESUME';
-        }, 2000);
-      }, 1000);
-    }
+  event.preventDefault();
+  const btn = event.target;
+  btn.textContent = 'PREPARING...';
+
+  // trigger actual download
+  const fileUrl = 'Ayesham Raheel SG Resume 2025.pdf'; // update to your real file name
+  const a = document.createElement('a');
+  a.href = fileUrl;
+  a.download = 'Ayesham-Raheel-Resume.pdf'; // what it will save as
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  setTimeout(() => {
+    btn.textContent = 'DOWNLOADED!';
+    setTimeout(() => {
+      btn.textContent = 'DOWNLOAD RESUME';
+    }, 2000);
+  }, 1000);
+}
+
 
     // ========== CONFIG MANAGEMENT ==========
     async function onConfigChange(newConfig) {
