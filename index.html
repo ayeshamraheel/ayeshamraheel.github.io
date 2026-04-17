@@ -6,20 +6,25 @@
   <title>Ayesham Raheel - Portfolio</title>
   <style>
 
-.ugc-media { 
- flex: 0 0 auto; 
- width: 300px; 
- display: flex; 
- justify-content: center; 
- align-items: center; } 
-   
-   .ugc-video{
-    width: 200px; 
-    margin: 0 auto; 
-    overflow: hidden; 
-    border-radius: 20px; } 
-   
-   .ugc-video video { width: 100%; height: 100%; object-fit: contain; }
+.ugc-media {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ugc-video {
+  width: 260px;          /* 👈 make this smaller for slimmer look */
+  aspect-ratio: 9 / 16;  /* keeps perfect vertical shape */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ugc-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* no cropping */
+}
 
 .foodly-video {
   width: 350px;              /* let the container control the width */
